@@ -1,5 +1,6 @@
 package com.example.andres.laboratorio4
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -63,14 +64,21 @@ class Start : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListen
           R.id.Nav_Inicio -> {
               println("Presionaste inicio")
               Toast.makeText(this,"Presionaste inicio",Toast.LENGTH_SHORT).show()
+              val myintent = Intent(this,Start::class.java)
+              startActivity(myintent)
+
                // Handle the camera action
             }
             R.id.Nav_Proyectos -> {
                 Toast.makeText(this,"Presionaste Proyectos",Toast.LENGTH_SHORT).show()
+                val myintent = Intent(this,Project_Menu::class.java)
+                startActivity(myintent)
 
             }
             R.id.Nav_Direccion -> {
                 Toast.makeText(this,"Presionaste Direccion",Toast.LENGTH_SHORT).show()
+                val myintent = Intent(this,MapsActivity::class.java)
+                startActivity(myintent)
             }
 //            R.id.nav_manage -> {
 //

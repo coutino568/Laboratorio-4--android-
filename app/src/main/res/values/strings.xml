@@ -9,4 +9,5 @@
     <string name="CouEmail">xplay568@gmail.com</string>
     <string name="title_activity_project__menu">Project_Menu</string>
     <string name="title_activity_web_viewer">webViewer</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
