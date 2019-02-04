@@ -11,7 +11,7 @@
         <item
                 android:id="@+id/Nav_Proyectos"
                 android:icon="@drawable/ic_menu_gallery"
-                android:title="Proyectos" tools:icon="@android:drawable/btn_star"/>
+                android:title="Proyecto 2" tools:icon="@android:drawable/btn_star"/>
         <item android:title="Direccion" android:id="@+id/Nav_Direccion" android:icon="@android:drawable/ic_dialog_map"/>
     </group>
 

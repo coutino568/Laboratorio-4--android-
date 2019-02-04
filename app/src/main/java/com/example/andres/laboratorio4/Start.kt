@@ -12,6 +12,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_start.*
 import kotlinx.android.synthetic.main.app_bar_start.*
+import java.lang.Exception
 
 class Start : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -21,7 +22,7 @@ class Start : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListen
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Contacting by email is not available", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
 
@@ -71,10 +72,16 @@ class Start : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListen
             }
             R.id.Nav_Proyectos -> {
                 Toast.makeText(this,"Presionaste Proyectos",Toast.LENGTH_SHORT).show()
-                val myintent = Intent(this,Project_Menu::class.java)
-                startActivity(myintent)
+                //intento the abrir proyecyos
+//                val myintent = Intent(this,Project_Menu::class.java)
+//                startActivity(myintent)}
+//                intento de abrir la web de un solo
+                val intent = Intent(this, webViewer::class.java)
+            intent.putExtra("URL_ID", "2")
+            startActivity(intent)}
 
-            }
+
+
             R.id.Nav_Direccion -> {
                 Toast.makeText(this,"Presionaste Direccion",Toast.LENGTH_SHORT).show()
                 val myintent = Intent(this,MapsActivity::class.java)

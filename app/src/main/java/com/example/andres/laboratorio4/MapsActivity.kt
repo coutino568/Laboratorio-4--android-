@@ -35,9 +35,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        // Add a marker in Sydney and move the camera
+        // Add a marker to UVG and move the camera also set zoom
         val mylocation = LatLng(14.604713, -90.489377)
         mMap.addMarker(MarkerOptions().position(mylocation).title("Marker in Guatemala"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(mylocation))
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mylocation,20f))
     }
 }
